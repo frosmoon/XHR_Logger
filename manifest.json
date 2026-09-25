@@ -1,0 +1,69 @@
+{
+    "name": "XHR Logger V4",
+    "short_name": "XHRLog V4",
+    "author": "BishaL",
+    "description": "Intercepts XHR requests and logs them",
+    "version": "4.0.5",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "\u003Call_urls>"
+            ],
+            "resources": [
+                "css/*",
+                "_locales/*",
+                "js/*"
+            ]
+        }
+    ],
+    "offline_enabled": true,
+    "homepage_url": "http://localhost",
+    "update_url": "http://localhost",
+    "default_locale": "en",
+    "permissions": [
+        "webRequest",
+        "activeTab",
+        "scripting",
+        "declarativeNetRequest",
+        "storage",
+        "contextMenus"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+    ],
+    "action": {
+        "default_popup": "actions/index.html",
+        "default_icon": "images/logo38.png",
+        "default_title": "XHRLog V4"
+    },
+    "options_page": "actions/options.html",
+    "commands": {
+        "open_xhr_main": {
+            "suggested_key": {
+                "default": "Alt+Shift+X",
+                "mac": "Command+Shift+X"
+            },
+            "description": "Open XHRLogger Settings"
+        },
+        "xhrloggeronoff": {
+            "suggested_key": {
+                "default": "Alt+Shift+G",
+                "mac": "Command+Shift+G"
+            },
+            "description": "Toggle XHRLogge"
+        }
+    },
+    "icons": {
+        "16": "images/logo16.png",
+        "32": "images/logo32.png",
+        "38": "images/logo38.png",
+        "48": "images/logo48.png",
+        "128": "images/logo128.png"
+    }
+}

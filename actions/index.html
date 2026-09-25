@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XHR Logger v4</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <style>
+        #results {
+            display: none;
+        }
+
+        #json {
+            display: block;
+        }
+
+        #on_offE {
+            display: none;
+        }
+        #message{
+            display: none;
+        }
+        .error{
+            color: red;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="content">
+            <div id="message">Data</div>
+            <div class="title">XHR Logger V4</div>
+            <div class="description">
+                <p>
+                    This is an advanced <b>XHR logger</b>.
+                </p>
+                <div id="on_offE">
+                <hr>
+                    <input id="toggle-onE" class="toggle toggle-left" value="false" name="onon" type="radio" checked>
+                    <label for="toggle-onE" class="btn">On</label>
+                    <input id="toggle-offE" class="toggle toggle-right" value="true" name="onon" type="radio">
+                    <label for="toggle-offE" class="btn">Off</label>
+                </div>
+                <hr>
+                <textarea id="json" placeholder="Here will be shown the errors."></textarea>
+
+                <div id="count"></div>
+                <br>
+                <div class="advc">
+                    <div id="results"></div>
+                    <button type="button" id="toggleButton">Visualizza Advanced</button>
+                </div>
+                <button type="button" class="secondary" id="copy">Copy</button>
+                <button type="button" class="secondary" id="clear">Clear</button>
+                <button type="button" class="secondary" id="refresh">Refresh</button>
+                <br>
+                <h2 class="divider line glow">Configs</h2>
+                <label for="inp">Insert the url you want to record! Current site by default!</label>
+                <input id="inp" placeholder="https://mysite.example/path/to/my/site/" type="text">
+                <button id="smb" type="button">Record this site</button>
+                <br>
+                <input id="toggle-on" class="toggle toggle-left" value="false" name="fetch" type="radio" checked>
+                <label for="toggle-on" class="btn">Global</label>
+                <input id="toggle-off" class="toggle toggle-right" value="true" name="fetch" type="radio">
+                <label for="toggle-off" class="btn">Strict</label>
+
+                <input id="toggle-on2" class="toggle toggle-left" value="false" name="adv" type="radio" checked>
+                <label for="toggle-on2" class="btn">Simple</label>
+                <input id="toggle-off2" class="toggle toggle-right" value="true" name="adv" type="radio">
+                <label for="toggle-off2" class="btn">Advanced</label>
+                <br>
+                <button id="settings" type="button">Settings</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

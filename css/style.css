@@ -1,0 +1,301 @@
+   html,
+   body {
+       width: 300px;
+       overflow: hidden;
+       font-family: sans-serif;
+       font-size: 16px;
+       line-height: 1.5;
+       color: #ffffff;
+       background-color: #111845;
+       text-align: center;
+       margin: 0 auto;
+       display: flex;
+       z-index: -1;
+       align-items: center;
+       justify-content: center;
+       min-width: 70%;
+   }
+
+   html::-webkit-scrollbar {
+       display: none;
+   }
+
+   .title {
+       font-size: 30px;
+       font-weight: bold;
+       margin-top: 20px;
+       padding: 20px;
+       border: 2px solid #c6c6c7;
+       color: #3498db;
+       text-shadow: 2px 2px 2px #9396a8;
+       box-shadow: 8px 8px 8px #feffff;
+       border-radius: 10px;
+       margin-bottom: 20px;
+   }
+
+   .content {
+       border: 1px solid #f0a591;
+       padding: 20px;
+       box-shadow: 0 5px 10px rgba(9, 0, 0, 0.5);
+   }
+
+   input {
+       border: 2px solid #c6c6c7;
+       box-shadow: 8px 8px 8px #feffff;
+       text-decoration: none;
+       transition: 0.5s;
+       border-radius: 10px;
+       padding: 10px;
+       margin: 10px;
+       font-size: 20px;
+       width: 80%;
+       height: 35px;
+       outline: none;
+       color: #111845;
+   }
+
+   input:focus {
+       box-shadow: 8px 8px 8px #2afcfc;
+   }
+
+   button {
+       border: 2px solid #c6c6c7;
+       box-shadow: 8px 8px 8px #feffff;
+       text-decoration: none;
+       transition: 0.5s;
+       border-radius: 10px;
+       padding: 10px;
+       margin: 10px;
+       font-size: 20px;
+       width: 80%;
+       height: auto;
+       outline: none;
+       color: #111845;
+       background-color: #209ef3;
+       border: none;
+       cursor: pointer;
+       user-select: none;
+   }
+
+   button:hover {
+       background-color: #e74c3c;
+       color: white;
+       transition: 0.5s;
+       border: none;
+   }
+
+   button:active {
+       box-shadow: none;
+       transform: translate(8px, 8px);
+   }
+
+   label {
+       font-size: 20px;
+       font-weight: bold;
+       margin-top: 20px;
+       text-decoration: none;
+       transition: 0.5s;
+       word-wrap: break-word;
+   }
+
+
+
+   .box {
+       width: 100%;
+       height: 100%;
+       background: #111845a6;
+       box-sizing: border-box;
+       overflow: hidden;
+       box-shadow: 0 20px 50px rgb(23, 32, 90);
+       border: 2px solid #2a3cad;
+       padding: 20px;
+       position: relative;
+   }
+
+   #json {
+       overflow: scroll;
+       word-wrap: break-word;
+       word-break: break-all;
+       width: 100%;
+       height: 200px;
+       background: transparent;
+       color: #ffffff;
+       font-family: 'Courier New', Courier, monospace;
+       border: none;
+       background-color: #111845;
+       cursor: pointer;
+   }
+
+   #json::placeholder {
+       text-align: center;
+       font-size: 20px;
+       font-weight: bold;
+       margin-top: 20px;
+       padding: 20px;
+   }
+
+   #json::-webkit-scrollbar {
+       display: none;
+   }
+
+   /*#json:hover {}*/
+
+   button.secondary {
+       background-color: #118bdb;
+       width: auto;
+   }
+
+   .divider {
+       display: flex;
+   }
+
+   .divider::before,
+   .divider::after {
+       content: '';
+       flex: 1;
+   }
+
+   .glow::before,
+   .glow::after {
+       margin-top: calc(13%/2);
+       height: 10px;
+       /*
+            filter: blur(5px);
+            -webkit-filter: blur(5px);*/
+       border-radius: 10px;
+   }
+
+   .glow::before {
+       background: linear-gradient(to right, blue, #209ef3);
+   }
+
+   .glow::after {
+       background: linear-gradient(to left, blue, #209ef3);
+   }
+
+   /* Stili per gli input disabilitati */
+   input:disabled {
+       background-color: #ccc;
+       /* Cambia il colore dello sfondo per gli input disabilitati */
+       color: #888;
+       /* Cambia il colore del testo per gli input disabilitati */
+          /* Cambia il cursore per indicare che l'input è disabilitato */
+   }
+
+   /* Stili per i pulsanti disabilitati */
+   button:disabled {
+       background-color: #ccc;
+       /* Cambia il colore dello sfondo per i pulsanti disabilitati */
+       color: #888;
+       /* Cambia il colore del testo per i pulsanti disabilitati */
+          /* Cambia il cursore per indicare che il pulsante è disabilitato */
+   }
+
+   .btn {
+       border: 3px solid #1a1a1a;
+       display: inline-block;
+       padding: 10px;
+       position: relative;
+       text-align: center;
+       transition: background 600ms ease, color 600ms ease;
+   }
+
+   input[type="radio"].toggle {
+       display: none;
+   }
+
+   input[type="radio"].toggle+label {
+       cursor: pointer;
+       min-width: 60px;
+   }
+
+   input[type="radio"].toggle+label:hover {
+       background: none;
+       color: #1a1a1a;
+   }
+
+   input[type="radio"].toggle+label:after {
+       background: #17e7a2;
+       content: "";
+       height: 100%;
+       position: absolute;
+       top: 0;
+       transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
+       width: 100%;
+       z-index: -1;
+   }
+
+   input[type="radio"].toggle.toggle-left+label {
+       border-right: 0;
+   }
+
+   input[type="radio"].toggle.toggle-left+label:after {
+       left: 100%;
+   }
+
+   input[type="radio"].toggle.toggle-right+label {
+       margin-left: -5px;
+   }
+
+   input[type="radio"].toggle.toggle-right+label:after {
+       left: -100%;
+   }
+
+   input[type="radio"].toggle:checked+label {
+       cursor: default;
+       color: #fff;
+       transition: color 200ms;
+   }
+
+   input[type="radio"].toggle:checked+label:after {
+       left: 0;
+   }
+
+
+
+   /* Aggiungi un CSS per l'effetto shake */
+   .shake {
+       transition: shake 0.2s ease-in-out;
+   }
+
+   .valid {
+       border: 2px solid green;
+       color: green;
+       /* Cambia il colore del bordo a verde */
+   }
+
+   .invalid {
+       border: 2px solid red;
+       color: red;
+       /* Cambia il colore del bordo a rosso */
+   }
+   .invalid::placeholder {
+       color: red;
+   }
+
+   /* Aggiungi un'altra regola CSS per l'effetto di shake */
+   @keyframes shake {
+       0% {
+           transform: translateX(0);
+       }
+
+       20% {
+           transform: translateX(-5px);
+       }
+
+       40% {
+           transform: translateX(5px);
+       }
+
+       60% {
+           transform: translateX(-5px);
+       }
+
+       80% {
+           transform: translateX(5px);
+       }
+
+       100% {
+           transform: translateX(0);
+       }
+   }
